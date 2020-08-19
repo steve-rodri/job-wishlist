@@ -1,0 +1,53 @@
+.App {
+  min-height: 100vh;
+}
+
+.App > main {
+  display: grid;
+  max-width: 400px;
+  padding: 0 10px;
+}
+
+.App > main > header {
+  display: grid;
+  grid-auto-flow: column;
+  grid: auto / 1fr auto 1fr;
+  justify-content: center;
+  grid-gap: 25px;
+  margin: 50px 0 30px;
+}
+
+header > .Icon {
+  justify-self: end;
+}
+
+header > .Title {
+  display: grid;
+  justify-items: center;
+}
+
+button {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: gray;
+  margin: 10px 0;
+  box-shadow: 0 1px 2px 1px lightgray;
+  font-size: 35px;
+}
+
+button:hover {
+  cursor: pointer;
+  outline: none;
+}
+
+button:focus {
+  border-color: lightgray;
+  box-shadow: none;
+  outline: none;
+}
+
+.App > main > .List {
+  display: grid;
+  grid-gap: 10px;
+}
