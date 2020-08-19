@@ -26,7 +26,7 @@ header > .Title {
   justify-items: center;
 }
 
-button {
+.App > main > button {
   height: 40px;
   border-radius: 5px;
   border: 1px solid transparent;
@@ -36,12 +36,12 @@ button {
   font-size: 35px;
 }
 
-button:hover {
+.App > main > button:hover {
   cursor: pointer;
   outline: none;
 }
 
-button:focus {
+.App > main > button:focus {
   border-color: lightgray;
   box-shadow: none;
   outline: none;

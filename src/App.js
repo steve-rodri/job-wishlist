@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { AddJobForm } from "./components";
 import "./App.css";
 
 function App() {
+  const [open, setModal] = useState(false);
   return (
     <div className="App">
       <main>
@@ -12,9 +14,10 @@ function App() {
             <h2>Jobs</h2>
           </div>
         </header>
-        <button>+</button>
+        <button onClick={() => setModal(true)}>+</button>
         <div className="List"></div>
       </main>
+      <AddJobForm open={open} close={() => setModal(false)} />
     </div>
   );
 }
