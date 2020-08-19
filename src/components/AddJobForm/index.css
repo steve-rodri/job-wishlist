@@ -1,0 +1,45 @@
+.AddJobForm {
+  padding: 40px;
+  display: grid;
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.AddJobForm > h1 {
+  margin: 0 0 10px;
+}
+
+.AddJobForm > form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.AddJobForm > form > input {
+  width: 250px;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.AddJobForm > form > input:focus {
+  outline: none;
+  border-color: var(--purple);
+}
+
+.AddJobForm > button {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--purple);
+  padding: 15px;
+  color: var(--white);
+  font-size: 16px;
+}
+
+.AddJobForm > button:hover,
+.AddJobForm > button:focus {
+  outline: none;
+  cursor: pointer;
+}
