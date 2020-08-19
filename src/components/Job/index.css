@@ -1,0 +1,36 @@
+.Job {
+  height: 150px;
+  width: 100%;
+  border-radius: 5px;
+  color: var(--white);
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-flow: column;
+  grid: auto / auto 1fr;
+  padding: 20px 10px 10px 15px;
+}
+
+.Job > .logo {
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 100%;
+  background: var(--white);
+  height: 30px;
+  width: 30px;
+}
+
+.Job > main {
+  display: grid;
+}
+
+.Job > main > .description {
+  display: grid;
+  grid-gap: 10px;
+  align-items: center;
+  align-content: start;
+}
+
+.Job > main > .time-added {
+  justify-self: end;
+  align-self: end;
+}

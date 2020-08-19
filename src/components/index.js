@@ -1,4 +1,4 @@
-import Modal from "./Modal";
 import AddJobForm from "./AddJobForm";
+import Job from "./Job";
 
-export { Modal, AddJobForm };
+export { AddJobForm, Job };
