@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { AddJobForm, Job } from "./components";
+import { AddJobForm, DeletePrompt, Job } from "./components";
 import "./App.css";
 
 function App() {
-  const [open, setModal] = useState(false);
+  const [jobFormOpen, setJobFormModal] = useState(false);
+  const [deletePromptOpen, setDeletePromptModal] = useState(false);
+  const [jobToDelete, setJobToDelete] = useState();
   const jobs = useSelector((state) => state);
   return (
     <div className="App">
@@ -16,14 +18,25 @@ function App() {
             <h2>{jobs.length} Jobs</h2>
           </div>
         </header>
-        <button onClick={() => setModal(true)}>+</button>
+        <button onClick={() => setJobFormModal(true)}>+</button>
         <div className="List">
           {jobs.map((job) => (
-            <Job {...job} />
+            <Job
+              {...job}
+              onDelete={() => {
+                setJobToDelete(job);
+                setDeletePromptModal(true);
+              }}
+            />
           ))}
         </div>
       </main>
-      <AddJobForm open={open} close={() => setModal(false)} />
+      <AddJobForm open={jobFormOpen} close={() => setJobFormModal(false)} />
+      <DeletePrompt
+        open={deletePromptOpen}
+        close={() => setDeletePromptModal(false)}
+        job={jobToDelete}
+      />
     </div>
   );
 }

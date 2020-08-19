@@ -36,7 +36,7 @@ header > .Title {
   font-size: 35px;
 }
 
-.App > main > button:hover {
+button:hover {
   cursor: pointer;
   outline: none;
 }

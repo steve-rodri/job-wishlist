@@ -23,14 +23,33 @@
   display: grid;
 }
 
-.Job > main > .description {
+.description-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid: auto / 1fr auto;
+}
+
+.description {
   display: grid;
   grid-gap: 10px;
   align-items: center;
   align-content: start;
 }
 
-.Job > main > .time-added {
+.trashcan {
+  margin: 0 10px 0 0;
+  height: 28px;
+  width: 28px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.trashcan:hover {
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.time-added {
   justify-self: end;
   align-self: end;
 }

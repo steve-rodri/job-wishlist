@@ -32,6 +32,7 @@ export const AddJobForm = ({ open, close }) => {
             placeholder="Job Title"
             value={jobTitle}
             onChange={({ target: { value } }) => setJobTitle(value)}
+            onKeyDown={(e) => (e.key === "Enter" ? handleSubmit(e) : null)}
           />
         </form>
         <button type="submit" onClick={handleSubmit}>
