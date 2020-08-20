@@ -1,12 +1,7 @@
 import { createStore } from "redux";
-// import { componseWithDevTools } from "redux-devtools-extension/developmentOnly";
 import { loadState, saveState } from "./localStorage";
-// import thunk from "redux-thunk";
 import throttle from "lodash/throttle";
-
 import rootReducer from "./reducer";
-
-// const middleware = applyMiddleware(thunk);
 
 const configureStore = () => {
   const persistedState = loadState();
