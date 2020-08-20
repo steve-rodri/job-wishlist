@@ -14,9 +14,12 @@
   margin: 0 5px;
   padding: 5px;
   border-radius: 100%;
-  background: var(--white);
+  border: 1px solid var(--white);
   height: 30px;
   width: 30px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 
 .Job > main {
@@ -42,6 +45,10 @@
   width: 28px;
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: gray;
 }
 
 .trashcan:hover {

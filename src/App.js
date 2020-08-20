@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { AddJobForm, DeletePrompt, Job } from "./components";
+import { magicWandIcon } from "./components/icons";
 import "./App.css";
 
-function App() {
+const App = () => {
   const [jobFormOpen, setJobFormModal] = useState(false);
   const [deletePromptOpen, setDeletePromptModal] = useState(false);
   const [jobToDelete, setJobToDelete] = useState();
@@ -12,13 +13,17 @@ function App() {
     <div className="App">
       <main>
         <header>
-          <div className="Icon">Icon</div>
-          <div className="Title">
-            <h1>WISHLIST</h1>
-            <h2>{jobs.length} Jobs</h2>
+          <div className="Icon-Title">
+            <div className="Icon">{magicWandIcon()}</div>
+            <div className="Title">
+              <h1>WISHLIST</h1>
+              <h2>
+                {jobs.length} JOB{jobs.length === 1 ? "" : "S"}
+              </h2>
+            </div>
           </div>
+          <button onClick={() => setJobFormModal(true)}>+</button>
         </header>
-        <button onClick={() => setJobFormModal(true)}>+</button>
         <div className="List">
           {jobs.map((job) => (
             <Job
@@ -39,6 +44,6 @@ function App() {
       />
     </div>
   );
-}
+};
 
 export default App;

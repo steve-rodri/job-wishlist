@@ -8,6 +8,7 @@ body {
   --purple: #8000ff;
   --btn-primary: #8000ff;
   --btn-secondary: #a39da8;
+  overscroll-behavior-y: none;
   background: var(--white);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,6 +16,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+p {
+  font-family: "Helvetica neue";
 }
 
 code {

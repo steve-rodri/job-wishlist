@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { trashIcon, suitcaseIcon } from "../icons";
 import moment from "moment";
 import "./index.css";
 
@@ -11,15 +12,17 @@ export const Job = ({ company, jobTitle, timeAdded, color, onDelete }) => {
       onMouseEnter={() => setCanDelete(true)}
       onMouseLeave={() => setCanDelete(false)}
     >
-      <div className="logo"></div>
+      <div className="logo">{suitcaseIcon()}</div>
       <main>
         <div className="description-container">
           <div className="description">
-            <h2>{company}</h2>
-            <h4>{jobTitle}</h4>
+            <h3>{company}</h3>
+            <h5>{jobTitle}</h5>
           </div>
           {canDelete ? (
-            <div className="trashcan" onClick={onDelete}></div>
+            <div className="trashcan" onClick={onDelete}>
+              {trashIcon()}
+            </div>
           ) : null}
         </div>
         <div className="time-added">added {moment(timeAdded).fromNow()}</div>
